@@ -1,0 +1,27 @@
+domain: iffq.top
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: log-collector-operator
+repo: github.com/fanfengqiang/log-collector-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: iffq.top
+  group: logcollector
+  kind: LogStream
+  path: github.com/fanfengqiang/log-collector-operator/apis/logcollector/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+  domain: iffq.top
+  group: logcollector
+  kind: LogGathererConf
+  path: github.com/fanfengqiang/log-collector-operator/apis/logcollector/v1alpha1
+  version: v1alpha1
+version: "3"

@@ -1,0 +1,20 @@
+# permissions for end users to view logstreams.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: logstream-viewer-role
+rules:
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - logstreams
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - logstreams/status
+  verbs:
+  - get

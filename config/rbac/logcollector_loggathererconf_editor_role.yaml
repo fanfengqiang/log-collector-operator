@@ -1,0 +1,24 @@
+# permissions for end users to edit loggathererconfs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: loggathererconf-editor-role
+rules:
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - loggathererconfs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - loggathererconfs/status
+  verbs:
+  - get

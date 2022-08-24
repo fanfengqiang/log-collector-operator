@@ -1,0 +1,20 @@
+# permissions for end users to view loggathererconfs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: loggathererconf-viewer-role
+rules:
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - loggathererconfs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - loggathererconfs/status
+  verbs:
+  - get

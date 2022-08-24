@@ -1,0 +1,6 @@
+apiVersion: logcollector.iffq.top/v1alpha1
+kind: LogGathererConf
+metadata:
+  name: loggathererconf-sample
+spec:
+  # TODO(user): Add fields here

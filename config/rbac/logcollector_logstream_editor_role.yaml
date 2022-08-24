@@ -1,0 +1,24 @@
+# permissions for end users to edit logstreams.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: logstream-editor-role
+rules:
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - logstreams
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - logcollector.iffq.top
+  resources:
+  - logstreams/status
+  verbs:
+  - get

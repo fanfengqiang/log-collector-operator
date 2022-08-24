@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- logcollector_v1alpha1_logstream.yaml
+- logcollector_v1alpha1_loggathererconf.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
